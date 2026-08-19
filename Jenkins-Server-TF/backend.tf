@@ -1,9 +1,9 @@
 terraform {
   backend "s3" {
-    bucket         = "s3-devsecops-pro-bucket"
-    region         = "us-east-1"
+    bucket         = "jenkins-s3-eks-argo-bucket"
+    region         = "ap-south-1"
     key            = "End-to-End-Kubernetes-Three-Tier-DevSecOps-Project/Jenkins-Server-TF/terraform.tfstate"
-    dynamodb_table = "eks-argo-dynamodb"
+    dynamodb_table = "lock-files"
     encrypt        = true
   }
   required_version = ">=0.13.0"
